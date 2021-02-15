@@ -1,0 +1,29 @@
+<form [formGroup]="formgroup" (ngSubmit)="onSubmit()">
+    <input #numbermodtest />
+    <button (click)="mod(numbermodtest)">
+        testfizzbuzz</button>
+    {{textbuzz}}<br>
+     name
+    <input formControlName="Name" matInput/>
+    surname
+    <input formControlName="Surname" matInput/>
+    <br>
+    note
+    <textarea formControlName="Note" cols="40" rows="5"></textarea>
+    <select formControlName="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">FeMale</option>
+      </select>
+    <button (click)="onSubmit()">
+        Confirm</button>
+    {{this.Name}}
+    {{this.Surname}}
+    {{this.Note}}
+    {{this.Gender}}
+
+
+    flowcontrol
+    <div *ngFor="let allnumber of numbercontrol;">
+        {{allnumber}}
+    </div>
+</form>
